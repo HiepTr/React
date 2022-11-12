@@ -3,6 +3,15 @@ import './App.css';
 import SearchIcon from  './search.svg';
 const API_URL = 'http://www.omdbapi.com/?apikey=193381e9';
 
+const movie1 ={
+  
+    "Title": "Amazing Spiderman Syndrome",
+    "Year": "2012",
+    "imdbID": "tt2586634",
+    "Type": "movie",
+    "Poster": "N/A"
+
+}
 
 const App =() => {
     
@@ -28,6 +37,25 @@ const App =() => {
                   alt =  "search"
                   onClick ={()=> {}}
                 />
+            </div>
+
+            <div className = "container">
+              <div className = "movie">
+                <div>
+                  <p>{movie1.YEAR}</p>
+                </div>
+                <div>
+                  <img 
+                  src ={movie1.Poster!== 'N/A'? movie1.Poster: 'https://via.placeholder.com/400'}
+                  alt = {movie1.Title} />
+                </div>
+                <div>
+                  <span>{movie1.Type}</span>
+                  <h3>{movie1.Title}</h3>
+                </div>
+
+              </div>
+
             </div>
   
           
